@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+
+
+  <!-- <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="dashboard">
+    <div class="container-fluid p-0">
+      <div class="site d-flex">
+        <div class="sideheader d-flex flex-direction-column">
+          <div class="logo py-3">
+            <p>Employee</p><span>Management</span>
+          </div>
+          <hr>
+          <div class="menubar py-4">
+            <ul>
+              <li><a href=""><i class="fa-solid fa-house"></i> Dashboard</a></li>
+              <li><a href="index.html"><i class="fa-solid fa-chart-simple"></i> Employees</a></li>
+              <li><a href=""><i class="fa-solid fa-user"></i> My Profile</a></li>
+              <li><a href=""><i class="fa-solid fa-lock"></i> Logout</a></li>
+            </ul>
+          </div>
+
+          <hr>
+          <footer class="brand_logo d-flex pb-4 pt-3">
+            <h6>Powered by</h6><br>
+            <img src="image 1.png" alt="brandlogo">
+          </footer>
+        </div>
+        <div class="mainpage">
+          <nav class="navbar navbar-expand-lg navbar-light p-3">
+            <div class="container-fluid">
+              <div class="pagehead p-3">
+                <div class="heading">
+                  <p class="m-0 fs-14">Dashboard / <a href="index.html"> Employees</a> / Employee Details</p>
+                  <h3 class="m-0">Employees</h3>
+                </div>
+                <div class="search">
+                  <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder=" Search" aria-label="Search">
+                  </form>
+                  <i class="fa-regular fa-bell"></i>
+                  <img class="simg" src="Elipse 5 search.png" alt="image">
+                </div>
+              </div>
+            </div>
+          </nav>
+          <div class="employee_details">
+            <div class="background">
+              <img src="Background Image.png" alt="">
+            </div>
+            <div class="profile_photo">
+              <img src="" id="viewimage" alt="">
+            </div>
+            <div class="basic_details">
+              <div>
+                <label id="viewname" class="blod"><b></b<label>
+              </div>
+              <div>
+                <label id="viewemail" class="font_light"></label>
+              </div>
+            </div>
+            <div class="card_flex">
+
+              <div class="row rowhead">
+                <div class="col-lg-3 mb-4 mt-2 shadow ">
+                  <label class="font_light">Gender</label><br>
+                  <label class="font_dark" id="viewgender"></label>
+                </div>
+                <div class="col-lg-3 mb-4 mt-2 shadow ">
+                  <label class="font_light">Age</label><br>
+                  <label class="font_dark" id="viewage"></label>
+                </div>
+                <div class="col-lg-3 mb-4 mt-2 shadow ">
+                  <label class="font_light">Date of Birth</label><br>
+                  <label class="font_dark" id="viewdob"></label>
+                </div>
+              </div>
+
+              <div class="row mb-3 rowhead">
+                <div class="col-lg-5 mb-4 shadow">
+                  <label class="font_light">Mobile Number</label><br>
+                  <label class="font_dark" id="viewphone"></label>
+                </div>
+
+                <div class="col-lg-5 mb-4 shadow">
+                  <label class="font_light">Qualification</label><br>
+                  <label class="font_dark" id="viewqualification"></label>
+                </div>
+
+              </div>
+              <div class="row mb-3 rowhead">
+                <div class="col-lg-5 mb-3 shadow">
+                  <label class="font_light">Address</label><br>
+                  <label class="font_dark" id="viewaddress"></label>
+                </div>
+
+                <div class="col-lg-5 mb-3 shadow">
+                  <label class="font_light">Username</label><br>
+                  <label class="font_dark" id="viewusername"></label>
+                </div>
+
+
+
+              </div>
+              <div class="container">
+                <div class="footer bg-white pt-2 d-flex justify-content-md-end">
+                  <div class=" gap-2 d-md-flex justify-content-md-end pl-3">
+                    <button class="view_delete_btn" type="button" onclick="cancelfunc()">Delete</button>
+                    <button class="btn btn-primary btn-lg" id="viewedit" type="button" onclick="displaydata()">Edit
+                      Details </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- updateEmployee -->
+
+
+          <div id="overlay" onclick="overlayback()"></div>
+          <div id="editemployee_view" class="edit">
+            <section class="layout">
+              <div class="container d-flex gap-4 ">
+                <div class="card pt-4 p-4 mb-3 mt-1">
+                  <div class="title d-flex">
+                    <h4>Edit Employee</h4>
+                    <button class="cancelx" onclick="cancelx_view()"><i class="fa-solid fa-xmark"></i></button>
+
+                  </div>
+
+
+                  
+                  <label class="uploadview   p-3 mt-2 ">
+                    <div class="text-center max-auto" style="width: 250px;">
+                      <div class="change">
+                        <label for="input_fileimg">
+                          <input type="file" class="upload_photo" id="input_fileimg" name="avatar"
+                            accept="image/jpeg,image/png,image/jpg">
+                          <img id="upload_editimage" src="" alt="image">
+                        </label>
+                        <div class="Change_button">
+                          <label for="input_fileimg" class="btn style me-md-2edit" id="image_editUpload"
+                            type="label">Change</label>
+                        </div>
+                      </div>
+                    </div>
+                </label>
+              
+                <div class="row mt-3 mb-3 ">
+                  <div class="col-lg-4 col-md-6 mb-3">
+                    <label for="salutation" class="form-label">salutation </label>
+                    <select class="form-select" id="view_salutation" aria-label="Default select example">
+                      <option selected>select</option>
+                      <option>Mr</option>
+                      <option>Ms</option>
+                      <!-- <option value="3"></option> -->
+                    </select>
+                    <span id="view_salutationerror" class="text-danger"></span>
+                  </div>
+                  <div class="col-lg-4 col-md-6 mb-3 ">
+                    <label for="firstname" class="form-label ">First Name </label>
+                    <input type="text" class="form-control" id="view_fristname" placeholder="john"
+                      aria-label="First name">
+                    <span id="view_fristnameerror" class="text-danger"></span>
+                  </div>
+                  <div class="col-lg-4 col-md-6 mb-3">
+                    <label for="LastName" class="form-label ">Last Name </label>
+                    <input type="text" class="form-control" id="view_lastname" placeholder="doe" aria-label="Last name">
+                    <span id="view_lastnameerror" class="text-danger"></span>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-lg-6 mb-3">
+                    <form>
+                      <label for="exampleInputEmail1" class="form-label">Email address </label>
+                      <input type="email" class="form-control" id="view_email" placeholder="mail@simmmple.com"
+                        aria-describedby="emailHelp">
+                      <span id="view_emailerror" class="text-danger"></span>
+                      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                  </div>
+                  </form>
+                  <div class="col-lg-6 mb-3">
+                    <label for="MobileNumber " class="form-label">Mobile Number </label>
+                    <input type="number" class="form-control" id="view_phone" placeholder="enter mobile number"
+                      aria-describedby="emailHelp">
+                    <span id="view_phoneerror" class="text-danger"></span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6 mb-3">
+                    <label for="DateofBirth" class="form-label">Date of Birth </label>
+                    <input type="date" class="form-control" id="view_date" placeholder="select date of birth"
+                      aria-label="date">
+                    <span id="view_dateerror" class="text-danger"></span>
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="Gender" class="form-label " id="view_gender">Gender </label>
+                    <div class="d-flex">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input mt-2" type="radio" name="editgender" value="male">
+                        <label class="form-check-label mt-1" id="maleId" for="inlineRadio1">Male</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input mt-2" type="radio" name="editgender" value="female">
+                        <label class="form-check-label mt-1" id="femaleId" for="inlineRadio2">Female</label>
+                        <span id="view_gendererror" class="text-danger"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="mb-3 mt-3">
+                    <label for="formGroupExampleInputq" class="form-label">Qualifications </label>
+                    <input type="text" class="form-control" id="view_quqlification" placeholder="enter qualifications">
+                    <span id="view_quqlificationerror" class="text-danger"></span>
+
+                  </div>
+                </div>
+                <div>
+                  <div class="mb-3">
+                    <label for="Address" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="view_address" placeholder="enter address">
+                    <span id="view_addresserror" class="text-danger"></span>
+
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6 mb-3">
+                    <label for="Country" class="form-label">Country </label>
+                    <select class="form-select" id="view_country" aria-label="Default select example">
+                      <option selected>select country</option>
+                      <option>USA</option>
+                      <option>India</option>
+                      <!-- <option value="3">Three</option> -->
+                    </select>
+                    <span id="view_countryerror" class="text-danger"></span>
+                  </div>
+                  <div class="col-lg-6 mb-3">
+                    <label for="State" class="form-label">State </label>
+                    <select class="form-select" id="view_state" aria-label="Default select example">
+                      <option>kerala</option>
+                      <option>Tamilnadu</option>
+                      <option>IL</option>
+                      <option>TX</option>
+                      <option>WA</option>0
+                    </select>
+                    <span id="view_stateerror" class="text-danger"></span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6 mb-3">
+                    <label for="City" class="form-label">City </label>
+                    <input type="text" class="form-control" id="view_city" placeholder="enter city" aria-label="City">
+                    <span id="view_cityerror" class="text-danger"></span>
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="zip" class="form-label">Pin/Zip </label>
+                    <input type="text" class="form-control" id="view_zip" placeholder="enter zip/pin " aria-label="Zip">
+                    <span id="view_ziperror" class="text-danger"></span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6 mb-3">
+                    <label for="City" class="form-label">username </label>
+                    <input type="text" class="form-control" id="view_username" placeholder="enter username"
+                      aria-label="username">
+                    <span id="view_usernameerror" class="text-danger"></span>
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="zip" class="form-label">password</label>
+                    <input type="password" class="form-control" id="view_password" placeholder="enter password "
+                      aria-label="password">
+                    <span id="view_passworderror" class="text-danger"></span>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="footer bg-white pt-3 d-flex justify-content-md-end">
+                    <div class=" gap-2 d-md-flex justify-content-md-end pl-3">
+                      <button class="btn style me-md-2" type="button" onclick="cancelx_view()">Cancel</button>
+                      <button class="btn btn-primary btn-lg" id="updateEmployee" type="button">Save Changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          </section>
+        </div>
+
+
+
+        <!-- delete Employee ........:::::::-->
+
+
+        <div id="overlay" onclick="overlayback()"></div>
+
+
+        <div class="view_delete" id="view_delete">
+          <div class="close d-flex">
+            <h4>Delete Employee </h4>
+            <button id="delete_close"> <i class="fa-solid fa-xmark"></i></button>
+          </div>
+
+          <p>Are you sure you want to delete this employee?</p>
+
+          <div class="row">
+            <div class="button d-flex justify-content-end">
+              <button class="btn style" type="button" onclick="delete_cancel()">Cancel</button>
+              <button class="btn btn-danger py-2 px-3" id="deleteData" type="button" onclick=" deletefunction(id)">Delete</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="view.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

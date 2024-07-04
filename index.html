@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee-Management</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+  <div class="dashboard">
+    <div class="container-fluid p-0">
+      <div class="site d-flex">
+        <div class="sideheader d-flex flex-direction-column">
+          <div class="logo py-3">
+            <p>Employee</p><span>Management</span>
+          </div>
+          <hr>
+          <div class="menubar py-4">
+            <ul>
+              <li><a href=""><i class="fa-solid fa-house"></i> Dashboard</a></li>
+              <li><a href=""><i class="fa-solid fa-chart-simple"></i> Employees</a></li>
+              <li><a href=""><i class="fa-solid fa-user"></i> My Profile</a></li>
+              <li><a href=""><i class="fa-solid fa-lock"></i> Logout</a></li>
+            </ul>
+          </div>
+
+          <hr>
+          <footer class="brand_logo d-flex pb-4 pt-3">
+            <h6>Powered by</h6><br>
+            <img src="image 1.png" alt="brandlogo">
+          </footer>
+        </div>
+        <div class="mainpage">
+          <nav class="navbar navbar-expand-lg navbar-light p-3">
+            <div class="container-fluid">
+              <div class="pagehead p-3">
+                <div class="heading">
+                  <p class="m-0 fs-14">Dashboard / Employees</p>
+                  <h3 class="m-0">Employees</h3>
+                </div>
+                <div class="search">
+                  <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder=" Search" aria-label="Search"
+                      id="searchinput">
+                  </form>
+                  <i class="fa-regular fa-bell"></i>
+                  <img class="simg" src="Elipse 5 search.png" alt="image">
+                </div>
+              </div>
+            </div>
+          </nav>
+          <div class="employeeslist">
+            <div class="sub_head">
+              <div class="select_page">
+                <h4>Employees List</h4>
+                <select class="select_class" id="table_size">
+                  <option value="2">2</option>
+                  <option value="4">4</option>
+                  <option selected>5</option>
+                  <option value="8">8</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option id="table__size" value="20">20</option>
+                </select>
+                <div id="total_employees"></div>
+              </div>
+              <div class="d-grid gap-2 d-md-block">
+                <button class="btn btn-primary me-md-2" id="add" type="button">Add Employee</button>
+              </div>
+
+            </div>
+
+            <table class="table" id="tabledata">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <p>Sl.No <i class="fa-solid fa-chevron-down"></i></p>
+                  </th>
+                  <th scope="col">
+                    <p>Name <i class="fa-solid fa-chevron-down"></i></p>
+                  </th>
+                  <th scope="col">
+                    <p>Email <i class="fa-solid fa-chevron-down"></i></p>
+                  </th>
+                  <th scope="col">
+                    <p>Phone <i class="fa-solid fa-chevron-down"></i></p>
+                  </th>
+                  <th scope="col">
+                    <p>Gender <i class="fa-solid fa-chevron-down"></i></p>
+                  </th>
+                  <th scope="col">
+                    <p>DOB <i class="fa-solid fa-chevron-down"></i></p>
+                  </th>
+
+                  <th scope="col">
+                    <p>Country <i class="fa-solid fa-chevron-down"></i></p>
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="tablebody">
+                <!-- <tr>
+                                <th scope="row">1</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr> -->
+                <tr>
+                  <th scope="row">2</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td colspan="2"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td colspan="2"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+          </div>
+          <footer class="foot ">
+            <div id="pagination">
+              <div class="indexbutton">
+
+              </div>
+            </div>
+
+            <hr>
+            <div class="bottom">
+              <p>© 2023 All Rights Reserved.<span>Stackup</span></p>
+              <div class="left">
+                <p>Terms of Use </p>
+                <p> Privacy Policy</p>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- add employee -->
+  <div id="overlay" onclick="overlayback()"></div>
+  <div id="addemployee" class="addemployee">
+    <div class="container d-flex gap-4 ">
+
+      <div class="card pt-3 p-3 mb-2 mt-1">
+        <div class="title d-flex">
+          <h4>Add Employee</h4>
+          <button class="cancelx" onclick="cancelx()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <form id="addEmployeeForm">
+
+          <label class="upload_image d-flex p-2 mt-3">
+            <div class="mx-auto p-2  mt-2 text-center " style="width: 250px;  ">
+              <!-- <i class="fa-solid fa-upload "></i> -->
+              <label for="input_File">
+
+                <input type="file" class="form-control add_photo" id="input_File">
+
+                <img src="blank-profile-picture-973460_640.png" alt="add-image" id="upload_img"></label>
+
+
+                <p class="fw-bolder color  m-0"> Upload Image</p>
+                <p class="fw-light light">PNG, JPG files are allowed</p>
+            </div>
+          </label>
+
+
+          <div class="row mt-2 mb-2 ">
+            <div class="col-lg-4 col-md-6 mb-3">
+              <label for="salutation" class="form-label">salutation </label>
+              <select class="form-select" id="salutation" aria-label="Default select example">
+                <option selected>select</option>
+                <option value="Mr">Mr</option>
+                <!-- <option value="ms"></option> -->
+                <option value="Ms">Ms</option>
+              </select>
+              <span id="salutationerror" class="text-danger"></span>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3 ">
+              <label for="firstname" class="form-label ">First Name </label>
+              <input type="text" id="firstName" class="form-control" placeholder="john" aria-label="First name">
+              <span id="firstNameerror" class="text-danger"></span>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+              <label for="LastName" class="form-label ">Last Name </label>
+              <input type="text" id="lastName" class="form-control" placeholder="doe" aria-label="Last name">
+              <span id="lastNameerror" class="text-danger"></span>
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-lg-6 mb-3">
+              <form>
+                <label for="exampleInputEmail1" class="form-label">Email address </label>
+                <input type="email" class="form-control" id="Email" placeholder="mail@simmmple.com"
+                  aria-describedby="emailHelp">
+                <span id="emailerror" class="text-danger"></span>
+                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+            </div>
+        </form>
+        <div class="col-lg-6 mb-2">
+          <label for="MobileNumber " class="form-label">Mobile Number </label>
+          <input type="text" class="form-control" id="phone" placeholder="enter mobile number"
+            aria-describedby="emailHelp">
+          <span id="phoneerror" class="text-danger"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mb-2">
+          <label for="DateofBirth" class="form-label">Date of Birth </label>
+          <input type="date" id="date" class="form-control" placeholder="select date of birth" aria-label="date">
+          <span id="doberror" class="text-danger"></span>
+        </div>
+        <div class="col-lg-6">
+          <label for="Gender" id="gender" class="form-label ">Gender </label>
+          <div class="d-flex">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input mt-2" type="radio" name="gender" id="maleId" value="male">
+              <label class="form-check-label mt-1" for="maleId">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input mt-2" type="radio" name="gender" id="femaleId" value="female">
+              <label class="form-check-label mt-1" for="femaleId">Female</label>
+            </div>
+          </div>
+          <span id="gendererror" class="text-danger"></span>
+        </div>
+      </div>
+      <div>
+        <div class="mb-3 mt-2">
+          <label for="formGroupExampleInputq" class="form-label">Qualifications </label>
+          <input type="text" class="form-control" id="Qualifications" placeholder="enter qualifications">
+          <span id="qualificationerror" class="text-danger"></span>
+        </div>
+      </div>
+      <div>
+        <div class="mb-2">
+          <label for="Address" class="form-label">Address</label>
+          <input type="text" class="form-control" id="Address" placeholder="enter address">
+          <span id="addresserror" class="text-danger"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mb-2">
+          <label for="Country" class="form-label">Country </label>
+          <select class="form-select" id="country" aria-label="Default select example">
+            <option selected>select</option>
+            <option>India</option>
+            <option>USA</option>
+            <!-- <option value="3">Three</option> -->
+          </select>
+          <span id="countryerror" class="text-danger"></span>
+        </div>
+        <div class="col-lg-6 mb-2">
+          <label for="State" class="form-label">State </label>
+          <select class="form-select" id="state" aria-label="Default select example">
+            <option selected>select</option>
+            <option value="kerala">kerala</option>
+            <option value="IL">IL</option>
+            <option value="TX">TX</option>
+            <option value="WA">WA</option>
+          </select>
+          <span id="stateerror" class="text-danger"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mb-2">
+          <label for="City" class="form-label">City </label>
+          <input type="text" id="city" class="form-control" placeholder="enter city" aria-label="City">
+          <span id="cityerror" class="text-danger"></span>
+        </div>
+        <div class="col-lg-6">
+          <label for="zip" class="form-label">Pin/Zip </label>
+          <input type="text" id="Zip" class="form-control" placeholder="enter zip/pin " aria-label="Zip">
+          <span id="ziperror" class="text-danger"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mb-2">
+          <label for="City" class="form-label">username </label>
+          <input type="text" id="username" class="form-control" placeholder="enter username" aria-label="username">
+          <span id="usernameerror" class="text-danger"></span>
+        </div>
+        <div class="col-lg-6">
+          <label for="password" class="form-label">password </label>
+          <input type="password" id="password" class="form-control" placeholder="enter password " aria-label="password">
+          <span id="passworderror" class="text-danger"></span>
+        </div>
+      </div>
+      <div class="container">
+        <div class="footer bg-white pt-2 d-flex justify-content-md-end">
+          <div class=" gap-2 d-md-flex justify-content-md-end pl-3">
+            <button class="btn style me-md-2" type="button" id="cancelfunc">Cancel</button>
+            <button class="btn btn-primary btn-lg" type="submit" id="addemp">Add Employee</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <!-- edit employee -->
+  <div id="overlay" onclick="overlayback_()"></div>
+
+
+  <div id="editemployee" class="editemployee">
+    <section class="layout">
+      <div class="container d-flex gap-4 ">
+        <div class="card pt-4 p-4 mb-3 mt-1">
+          <div class="title d-flex">
+            <h4>Edit Employee</h4>
+            <button class="cancelx" onclick="cancelx_edit()"><i class="fa-solid fa-xmark"></i></button>
+
+          </div>
+          <label class="uploadedit  p-3 mt-2 ">
+            <div class="text-center max-auto" style="width: 250px;">
+              <div class="change">
+                <label for="input_fileimg">
+                  <input type="file" class="upload_photo" id="input_fileimg" name="avatar"
+                    accept="image/jpeg,image/png,image/jpg">
+                  <img id="upload_editimage" src="" alt="image">
+                </label>
+                <div class="Change_button">
+                  <label for="input_fileimg" class="btn style me-md-2edit" id="image_editUpload"
+                    type="label">Change</label>
+                </div>
+              </div>
+            </div>
+          </label>
+          <div class="row mt-3 mb-3 ">
+            <div class="col-lg-4 col-md-6 mb-3">
+              <label for="salutation" class="form-label">salutation </label>
+              <select class="form-select" id="edit_salutation" aria-label="Default select example">
+                <option selected>select</option>
+                <option>Mr</option>
+                <option>Ms</option>
+                <!-- <option value="3"></option> -->
+              </select>
+              <span id="edit_salutationerror" class="text-danger"></span>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3 ">
+              <label for="firstname" class="form-label ">First Name </label>
+              <input type="text" class="form-control" id="edit_fristname" placeholder="john" aria-label="First name">
+              <span id="edit_fristnameerror" class="text-danger"></span>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+              <label for="LastName" class="form-label ">Last Name </label>
+              <input type="text" class="form-control" id="edit_lastname" placeholder="doe" aria-label="Last name">
+              <span id="edit_lastnameerror" class="text-danger"></span>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-lg-6 mb-3">
+              <form>
+                <label for="exampleInputEmail1" class="form-label">Email address </label>
+                <input type="email" class="form-control" id="edit_email" placeholder="mail@simmmple.com"
+                  aria-describedby="emailHelp">
+                <span id="edit_emailerror" class="text-danger"></span>
+                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+            </div>
+            </form>
+            <div class="col-lg-6 mb-3">
+              <label for="MobileNumber " class="form-label">Mobile Number </label>
+              <input type="number" class="form-control" id="edit_phone" placeholder="enter mobile number"
+                aria-describedby="emailHelp">
+              <span id="edit_phoneerror" class="text-danger"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 mb-3">
+              <label for="DateofBirth" class="form-label">Date of Birth </label>
+              <input type="date" class="form-control" id="edit_date" placeholder="select date of birth"
+                aria-label="date">
+              <span id="edit_dateerror" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6">
+              <label for="Gender" class="form-label " id="edit_gender">Gender </label>
+              <div class="d-flex">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input mt-2" type="radio" name="editgender" value="male">
+                  <label class="form-check-label mt-1" for="inlineRadio1">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input mt-2" type="radio" name="editgender" value="female">
+                  <label class="form-check-label mt-1" for="inlineRadio2">Female</label>
+                  <span id="edit_gendererror" class="text-danger"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="mb-3 mt-3">
+              <label for="formGroupExampleInputq" class="form-label">Qualifications </label>
+              <input type="text" class="form-control" id="edit_quqlification" placeholder="enter qualifications">
+              <span id="edit_qualificationerror" class="text-danger"></span>
+            </div>
+          </div>
+          <div>
+            <div class="mb-3">
+              <label for="Address" class="form-label">Address</label>
+              <input type="text" class="form-control" id="edit_address" placeholder="enter address">
+              <span id="edit_addresserror" class="text-danger"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 mb-3">
+              <label for="Country" class="form-label">Country </label>
+              <select class="form-select" id="edit_country" aria-label="Default select example">
+                <option selected>select country</option>
+                <option>USA</option>
+                <option>India</option>
+                <!-- <option value="3">Three</option> -->
+              </select>
+              <span id="edit_countryerror" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 mb-3">
+              <label for="State" class="form-label">State </label>
+              <select class="form-select" id="edit_state" aria-label="Default select example">
+                <option>kerala</option>
+                <option>Tamilnadu</option>
+                <option>IL</option>
+                <option>TX</option>
+                <option>WA</option>0
+              </select>
+              <span id="edit_stateerror" class="text-danger"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 mb-3">
+              <label for="City" class="form-label">City </label>
+              <input type="text" class="form-control" id="edit_city" placeholder="enter city" aria-label="City">
+              <span id="edit_cityerror" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6">
+              <label for="zip" class="form-label">Pin/Zip </label>
+              <input type="text" class="form-control" id="edit_zip" placeholder="enter zip/pin " aria-label="Zip">
+              <span id="edit_ziperror" class="text-danger"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 mb-3">
+              <label for="City" class="form-label">username </label>
+              <input type="text" class="form-control" id="edit_username" placeholder="enter username" aria-label="City">
+              <span id="edit_usernameeror" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6">
+              <label for="zip" class="form-label">password</label>
+              <input type="password" class="form-control" id="edit_password" placeholder="enter password "
+                aria-label="password">
+              <span id="edit_passworderror" class="text-danger"></span>
+            </div>
+          </div>
+          <div class="container">
+            <div class="footer bg-white pt-3 d-flex justify-content-md-end">
+              <div class=" gap-2 d-md-flex justify-content-md-end pl-3">
+                <button class="btn style me-md-2" type="button" onclick="cancel_edit()">Cancel</button>
+                <button class="btn btn-primary btn-lg" id="updateEmployee" type="button">Save Changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- delete Employee ........:::::::-->
+  <div id="overlay" onclick="overlayback_()"></div>
+  <div class="delete_employee" id="delete">
+
+
+    <div class="close d-flex">
+      <h4>Delete Employee </h4>
+      <button id="delete_close" onclick="delete_close()"> <i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <p>Are you sure you want to delete this employee?</p>
+
+    <div class="row">
+      <div class="button d-flex justify-content-end">
+        <button class="btn style" type="button" onclick="delete_cancel()">Cancel</button>
+        <button class="btn btn-danger py-2 px-3 " id="deleteData" type="button">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="action.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
