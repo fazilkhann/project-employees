@@ -12,7 +12,7 @@ function fetchData() {
         })
 
         .then(data => {
-            console.log(data);
+           
             fetchedData = data.reverse();
             display();
             document.getElementById("total_employees").innerHTML = `${fetchedData.length}`;
